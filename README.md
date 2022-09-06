@@ -26,5 +26,5 @@ e entre outros temas fundamentais para se tornar um desenvolvedor Python.
 <img src = img/img2.jpeg>
 
 ## <u>Documentação</u>
-- Para acessar a documentação do `usuário`: 
-- Para acessar a documentação do `desenvolvedor`:
+- Para acessar a documentação do `usuário`: [Link para usuário](https://rodrigogcoelhoo.github.io/dev-aberto-atv-aula03/index_user/)
+- Para acessar a documentação do `desenvolvedor`: [Link para desenvolvedor](https://rodrigogcoelhoo.github.io/dev-aberto-atv-aula03/index_dev/)
