@@ -1,14 +1,17 @@
+"""Imports"""
 import sqlite3
 
-with open('quiz.sql', 'r') as sql_file:
+with open('quiz.sql', 'r', encoding="utf-8") as sql_file:
     sql_script = sql_file.read()
 
-def createDb():
+def create_db():
+    """Create DataBase"""
     conn = sqlite3.connect('quiz.db')
     cursor = conn.cursor()
     cursor.executescript(sql_script)
     conn.commit()
-    conn.close()  
+    conn.close()
 
 if __name__ == '__main__':
-    createDb()
+    create_db()
+    
