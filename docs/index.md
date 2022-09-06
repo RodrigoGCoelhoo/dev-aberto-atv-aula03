@@ -1,6 +1,6 @@
-# Desafios 2018.2
+# Documentação de Usuário
 
-Plataforma de desafios de Design de Software
+Plataforma de Desafios de Design de Software
 
 ## Getting started
 
