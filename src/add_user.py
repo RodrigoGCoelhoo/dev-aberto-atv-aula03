@@ -8,7 +8,7 @@ def add_user(user, pwd, user_type):
     """
     conn = connect('quiz.db')
     cursor = conn.cursor()
-    cursor.execute('Insert into USER(?,?,?);', (user, pwd, user_type))
+    cursor.execute('Insert into USER(user,pass,type) values (?,?,?)', (user, pwd, user_type))
     conn.commit()
     conn.close()
 
