@@ -60,7 +60,7 @@ def get_quizes(user):
     if user in ['admin', 'fabioja']:
         cursor.execute("SELECT id, numb from QUIZ")
     else:
-        cursor.execute("SELECT id, numb from QUIZ where release < ?", (formatted_date))
+        cursor.execute(f"SELECT id, numb from QUIZ where release < '{formatted_date}'")
 
     info = cursor.fetchall()
     conn.close()
@@ -122,14 +122,14 @@ def get_info(user):
     """
     conn = sqlite3.connect(DBNAME)
     cursor = conn.cursor()
-    print("SELECT pass, type from USER where user = ?", (user))
-    cursor.execute("SELECT pass, type from USER where user = ?", (user))
+    cursor.execute(f"SELECT pass from USER where user = '{user}'" )
 
     info = cursor.fetchall()
+    print(info[0][0])
     conn.close()
     if len(info) == 0:
         return None
-    return info[0]
+    return info[0][0]
 
 auth = HTTPBasicAuth()
 
